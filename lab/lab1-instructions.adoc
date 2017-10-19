@@ -43,9 +43,17 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-de
 +
     mvn clean fabric8:deploy -Popenshift
 
-== Verify Deployment and Application within OpenShift
+== Implement Hysterix Dashboard and Turbine Server
+Now let’s add the Hysterix Dashboard and Turbine Server components to monitor the gateway and definition microservices within our project.
 
-1. Login to the OpenShift Web Console (Get URL from your OpenShift admin)
+1. Back at the command line, navigate to the root of the git project and execute the following *oc* command:
++
+[source,bash]
+----
+oc process -f support/templates/kubeflix.json | oc create -f-
+----
++
+You should now see these components deployed and running in your project after the supporting Container Images were successfully pulled as shown below:
 
 1. From the Web Console Home Page, scroll down and select the Project used for this Lab
 
