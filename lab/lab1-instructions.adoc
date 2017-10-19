@@ -34,6 +34,7 @@ From the OpenShift Web Console, select the project you have created or are using
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-deployment1.png[]
 +
+
 Expand the *gateway* microservice deployment, and click/select the created Route.  This should open a Swagger UI/API Explorer for the deployed *definition* microservice, verify the operation of the definition API as shown below:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-deployment2.png[]
