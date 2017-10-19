@@ -69,6 +69,6 @@ Now hit the definition API a bunch of times from the Swagger API Console and you
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard2.png[]
 +
-Go back to the definition deployment within the Web Console and on the diplayed pod, click the up arrow scaling it to *One*.  After the definition Pod Health Check succeeds, hit the definition API a bunch of times from the Swagger API Console.  You should see now see that the circuit breaker is now *open* again and successful responses are returned.
+Go back to the definition deployment within the Web Console and on the diplayed pod, click the up arrow scaling it to *One*.  After the definition Pod Health Check succeeds, hit the definition API a bunch of times from the Swagger API Console.  You should see that the circuit breaker is now *open* again and successful responses are returned.
 
 
