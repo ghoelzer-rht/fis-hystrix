@@ -93,7 +93,7 @@ Now let's simulate some load against the gateway and definition microservice usi
 ab -n 100000 -c 4 -s 5 -k -r http://gateway-fis-hysterix-lab01.cloudapps.keyvan.com/api/definition/camel
 ----
 +
-This will generate a 100K requests using 4 sessions against our API.  Open the Hystrix Dashboard, and you can watch/monitor the activity.  Let's now "simulate" an outage by killing one of the Pods.  In the Web Console, click in the middle of the Pods graphic to diplay the running Pods.  While ensuring your *ab* command is still running, select one of the rulling Pods then from the *Actions* Drop Down, select *Delete* to terminate it.  Go back to the Project Overview, and you should see a new Pod starting, and your *ab* command still running.  Watch the Hystrix Dashboard to see the stats/graphic change while the new Gateway Pod starts up.
+This will generate a 100K requests using 4 sessions against our API.  Open the Hystrix Dashboard, and you can watch/monitor the activity.  Let's now "simulate" an outage by killing one of the Pods.  In the Web Console, click in the middle of the Pods graphic to diplay the running Pods.  While ensuring your *ab* command is still running, select one of the running Pods then from the *Actions* Drop Down, select *Delete* to terminate it.  Go back to the Project Overview, and you should see a new Pod starting, and your *ab* command still running.  Watch the Hystrix Dashboard to see the stats/graphic change while the new Gateway Pod starts up.
 
 
 
