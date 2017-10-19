@@ -53,7 +53,13 @@ You should now see these components deployed and running in your project after t
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix1.png[]
 
-1. From the Web Console Home Page, scroll down and select the Project used for this Lab
+1. Open the Hysterix Dashboard and generate some API activity using the Swagger API Console.  Start by opening browser tab at the hystrix-dashboard Route Http Endpoint as show below:
++
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-turbine1.png[]
++
+Click the Monitor Stream button to display the Dashboard and hit the definition API a bunch of times from the Swagger API Console and you should see something like what is displayed below:
++
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard1.png[]
 
 1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment:
 +
