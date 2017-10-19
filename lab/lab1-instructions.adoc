@@ -65,7 +65,10 @@ Now let's try out the *circuit breaker* for the *definition* API.  Go back to th
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix2.png[]
 +
-Click the Monitor Stream button to display the Dashboard and hit the definition API a bunch of times from the Swagger API Console and you should see now see that the circuit break has *closed* due to the number of failures of the definition API as displayed below:
+Now hit the definition API a bunch of times from the Swagger API Console and you should see now see that the circuit breaker has *closed* due to the number of failures of the definition API as displayed below:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard2.png[]
++
+Go back to the definition deployment within the Web Console and on the diplayed pod, click the up arrow scaling it to *One*.  After the definition Pod Health Check succeeds, hit the definition API a bunch of times from the Swagger API Console.  You should see now see that the circuit breaker is now *open* again and successful responses are returned.
+
 
