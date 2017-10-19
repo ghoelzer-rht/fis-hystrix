@@ -3,29 +3,34 @@
 :data-uri:
 :toc2:
 
-== Lab 1 - Deploying on OpenShift Application Runtimes
+== Lab Guide - Deploying a Microservice Gateway using Kubeflix & Hysterix
 
-In this lab, you will learn how to take an existing Spring Boot application that has been converted to use RHOAR (Red Hat OpenShift Application Runtimes).  RHOAR is a collection of Red Hat Supported Microservice Framworks optimized for deployment on OpenShift.  See http://launch.openshift.io for more information on the complete set of languages/technologies supported.
+In this lab, we will create a Gateway Microservice Pattern implementation of a simple Dictionary Definition service using the Kubeflix API Implementation for Service Discovery and Routing.  Additionally, we will use Hysterix for Microservice monitoring and implementation of a circuit breaker pattern.  The Microservice implementations are using Red Hat Fuse Integration Services (FIS) 2.0, and use relatively simple REST and Java DSL, along with Java POJO and Service implementations.  FIS 2.0 is an integrated Java Framework that's highly suitable for Microservice implementations, and focused on real-time/event-driven integration patterns.  For more background on all the FIS 2.0 capabilities see - https://developers.redhat.com/blog/2017/02/21/announcing-fuse-for-agile-integration-on-the-cloud-fis-2-0-release/
 
-The Spring Boot application we will be deploying is a basic Product Catalog MVC Web App, using a PostgreSQL DB for persistence.  You can review the updates made to the original Spring application to use the RHOAR framework components at https://github.com/rhoar-enablement/spring/blob/master/lab4/docs/lab4-instructions.adoc .
-
-For the purpose of this lab we will walk you through how to take the completed Spring Boot/RHOAR project and deploy it to OpenShift. Before starting, ensure you have *forked and cloned this repo into a local working directory* and have the ability to *create or access a personal OpenShift project* for this Lab.
+*Fork/Clone this Repo into a local working directory to complete the Lab Exercises*
 
 :numbered:
 
-== Deploy to OpenShift
+== Deploy Base Microservices to OpenShift
 
 1. Login to the remote OpenShift environment (Get instructions from your OpenShift admin)
 
 1. Create a new project with a unique name or ensure an existing OpenShift project is selected 
 +
-    oc new-project product-catalog-<unique number>
+    oc new-project fis-hysterix-<unique number>
     or
     oc project <your-project-name>
 
-1. Create a Postgres database
+1. From the base of where you cloned your git repo, execute the following *oc* commands:
 +
-    oc new-app -e POSTGRESQL_USER=luke -ePOSTGRESQL_PASSWORD=secret -ePOSTGRESQL_DATABASE=my_data openshift/postgresql-92-centos7 --name=my-database
+[source,bash]
+----
+oc process -f support/templates/gateway.json | oc create -f-
+
+oc process -f support/templates/definition.json | oc create -f-
+----
+From the OpenShift Web Console, select the Project you have created or are using.  You should see that two s2i builds have kicked-off for the *gateway* and *definition components*, which will deploy when complete as shown below:
+    
 
 1. Build and deploy your project
 +
