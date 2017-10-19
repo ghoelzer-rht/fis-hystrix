@@ -83,6 +83,15 @@ Now let's take a short break from Lab Exercises so we can look at the Developer 
 This exercise with be a combination of a discussion around best practices, simple demonstrations using our Gateway Microservice example, and use of simple utilities to simulate load to validate configurations.  For the purposes of this lab, we will use Apache Benchmark to simulate load, if not already installed it can be found here - https://www.apachelounge.com/download/ (yes, you have to install the apache httpd binaries) .
 
 1. By default, Kubernetes Replication Controllers when ensure the requested number of Pods are running in the Cluster, and as part of our previous labs we saw that Rolling/No Downtime Deployments are supported.  Some additional considerations would be to ensure *two or more* Pods for components that require HA are specified.  Let's do this right now, and scale our *gateway* deployment:
++
+<image goes here>
++
+Now let's simulate some load against the gateway and definition microservice using the following *ab* command below, get the URL from the Swagger UI used in the previous Lab Exercise:
++
+[source,bash]
+----
+ab -n 1000 -c 4 -s 5 -k -r http://helloworld-mvn-test-springboot.rhel-cdk.10.1.2.2.xip.io/
+----
 
 
 
