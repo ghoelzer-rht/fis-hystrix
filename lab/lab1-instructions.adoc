@@ -71,7 +71,7 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-da
 +
 Go back to the definition deployment within the Web Console and on the diplayed pod, click the up arrow scaling it to *One*.  After the definition Pod Health Check succeeds, hit the definition API a bunch of times from the Swagger API Console.  You should see that the circuit breaker is now *open* again and successful responses are returned.
 
-== Break:  Review JBoss Developer Studio and Project Code
+== *** Break:  Review JBoss Developer Studio and Project Code ***
 Now let's take a short break from Lab Exercises so we can look at the Developer IDE provided by JBoss Developer Studio.  *Make sure to have installed JBDS*.. The package can be found here: https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=51401 .  If you don't have direct access, work with your OpenShift/Red Hat Sysadmin.  Item to review are:
 
 1. Install the Fuse/Integration pack from the additional Red Hat Plugins provided
@@ -79,6 +79,10 @@ Now let's take a short break from Lab Exercises so we can look at the Developer 
 3. Review the Fuse Spring and Camel Java Route and Service Implementations
 4. Use the Openshift Explorer to connect to your OpenShift Lab Environment
 
+== HA, Auto-Scaling, and Prod Deployment Considerations
+This exercise with be a combination of a discussion around best practices, simple demonstrations using our Gateway Microservice example, and use of simple utilities to simulate load to validate configurations.
+
+1. Install the Fuse/Integration pack from the additional Red Hat Plugins provided
 
 
 
