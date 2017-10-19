@@ -31,7 +31,7 @@ oc process -f support/templates/definition.json | oc create -f-
 ----
 From the OpenShift Web Console, select the project you have created or are using.  You should see that two s2i builds have kicked-off for the *gateway* and *definition components*, which will deploy when complete as shown below:
 
-image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-deployment1.png
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-deployment1.png[]
 
 1. Build and deploy your project
 +
