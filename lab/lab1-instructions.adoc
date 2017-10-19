@@ -76,7 +76,7 @@ Now let's take a short break from Lab Exercises so we can look at the Developer 
 
 1. Install the Fuse/Integration pack from the additional Red Hat Plugins provided
 2. Import the existing Maven Lab Project into the IDE
-3. Review the Fuse/Camel Route Visualizations
+3. Review the Fuse Spring and Camel Java Route and Service Implementations
 4. Use the Openshift Explorer to connect to your OpenShift Lab Environment
 
 
