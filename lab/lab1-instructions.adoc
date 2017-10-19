@@ -131,6 +131,10 @@ Now let's create some traffic and trigger a Scaling event.  After an initial Sca
 ----
 ab -n 200000 -c 4 -s 5 -k -r http://gateway-fis-hysterix-lab01.cloudapps.keyvan.com/api/definition/camel
 ----
++
+After 30-60 seconds, you should see that a Scaling event was triggered in the Web Console as shown below:
++
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha7.png[]
 
 
 
