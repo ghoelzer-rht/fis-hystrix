@@ -124,6 +124,13 @@ Save your changes, you will then see that a Rolling Deployment of the updated co
 Make sure the *definition deployment configuration* is selected in the Web Console, then select *Add Autoscaler* from the *Actions Drop Down*.  Create/Save the Autoscaler definition as shown below:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha6.png[]
++
+Now let's create some traffic and trigger a Scaling event.  After an initial Scaling Event is triggered, Scaling events ocurr only on predefined intervals (default 5 min) to prevent "flapping" or erratic scale up/down of resources.  Execute the *ab* command again, this time doubling the number of total requests:
++
+[source,bash]
+----
+ab -n 200000 -c 4 -s 5 -k -r http://gateway-fis-hysterix-lab01.cloudapps.keyvan.com/api/definition/camel
+----
 
 
 
