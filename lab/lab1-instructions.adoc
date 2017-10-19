@@ -50,6 +50,8 @@ oc process -f support/templates/kubeflix.json | oc create -f-
 ----
 +
 You should now see these components deployed and running in your project after the supporting Container Images were successfully pulled as shown below:
++
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix1.png[]
 
 1. From the Web Console Home Page, scroll down and select the Project used for this Lab
 
