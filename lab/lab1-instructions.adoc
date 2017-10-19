@@ -63,12 +63,9 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-da
 +
 Now let's try out the *circuit breaker* for the *definition* API.  Go back to the definition deployment within the Web Console, expand the view, and on the diplayed pod, click the down arrow scaling it to *Zero* pods as shown below:
 +
-
-
-1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment:
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix2.png[]
 +
-image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-deployment1.png[]
-
-1. Within the *product-catalog* application, open the URL from the created *Route* in another browser tab and verify the Spring application is working:
+Click the Monitor Stream button to display the Dashboard and hit the definition API a bunch of times from the Swagger API Console and you should see now see that the circuit break has *closed* due to the number of failures of the definition API as displayed below:
 +
-image::https://github.com/ghoelzer-rht/ocp-rhoar-spring/blob/master/lab/images/spring-lab-app1.png[]
+image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard2.png[]
+
