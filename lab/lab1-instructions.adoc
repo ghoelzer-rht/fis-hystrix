@@ -116,6 +116,8 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha
 Update the CPU and Memory Requests and Limits as shown below.  This will instruct the K8S Scheduler to find a Node Host with the Resources specified, and reserve the requested resources for Pods that are associated with this Deployment Configuration on the Node Hosts where they are running.  In addition, Auto-Scaling requires that a *CPU Request is specified*:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha5.png[]
++
+Save your changes, you will then see that a Rolling Deployment of the updated configuration is triggered, as the K8S Scheduler creates a new Pod with the desired Resource Requests/Limits.
 
 
 
