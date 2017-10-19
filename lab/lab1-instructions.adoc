@@ -39,10 +39,6 @@ Expand the *gateway* microservice deployment, and click/select the created Route
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-deployment2.png[]
 
-1. Build and deploy your project
-+
-    mvn clean fabric8:deploy -Popenshift
-
 == Implement Hysterix Dashboard and Turbine Server
 Now let’s add the Hysterix Dashboard and Turbine Server components to monitor the gateway and definition microservices within our project.
 
