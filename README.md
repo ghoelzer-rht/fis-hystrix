@@ -5,7 +5,11 @@ Demonstration of the Netflix OSS [Hystrix](https://github.com/Netflix/Hystrix) f
 
 ## Overview
 
-This project demonstrates a microservices based project that leverages Hystrix to provide fault tolerance for remote systems and invocations. A gateway application integrated with Hystrix stands in front of various  microservices providing language based services. 
+This project demonstrates a microservices based project that leverages Hystrix to provide fault tolerance for remote systems and invocations. A gateway application integrated with Hystrix stands in front of various  microservices providing language based services.
+
+## Guided Lab
+
+A guided lab-style set of deployment instructions and overview of the demo solution can be found at [Lab Guide](lab/lab1-instructions.adoc) 
 
 ## Components
 
@@ -113,4 +117,4 @@ A successful response will output the following
     "input": "camel"
 }
 ```
-
+
