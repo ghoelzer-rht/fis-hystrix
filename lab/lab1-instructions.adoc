@@ -60,6 +60,10 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-tu
 Click the Monitor Stream button to display the Dashboard and hit the definition API a bunch of times from the Swagger API Console and you should see something like what is displayed below:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard1.png[]
++
+Now let's try out the *circuit breaker* for the *definition* API.  Go back to the definition deployment within the Web Console, expand the view, and on the diplayed pod, click the down arrow scaling it to *Zero* pods as shown below:
++
+
 
 1. From the Overview Page of your Project, you should see the following Applications and Components running once they have completed deployment:
 +
