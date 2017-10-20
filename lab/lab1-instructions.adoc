@@ -118,7 +118,7 @@ Open the *definition deployment configuration* from the Web Console, and then se
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha5.png[]
 +
 This will instruct the K8S Scheduler to find a Node Host with the Resources specified, and reserve the requested resources for Pods that are associated with this Deployment Configuration on the Node Hosts where they are running.  In addition, Auto-Scaling requires that a *CPU Request is specified*.
-
++
 Save your changes, you will then see that a Rolling Deployment of the updated configuration is triggered, as the K8S Scheduler creates a new Pod with the desired Resource Requests/Limits.
 
 1. Now let's setup *Auto-Scaling* for our *definition* Deployment Configuration.  Currently, the only metric "out of the box" for Auto-Scaling within K8S is *CPU*.  
