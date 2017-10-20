@@ -65,7 +65,7 @@ Now let's try out the *circuit breaker* for the *definition* API.  Go back to th
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix2.png[]
 +
-Now hit the definition API a bunch of times from the Swagger API Console and you should see now see that the circuit breaker has *closed* due to the number of failures of the definition API as displayed below:
+Now hit the definition API a bunch of times from the Swagger API Console and you should now see that the circuit breaker has *closed* due to the number of failures of the definition API as displayed below:
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard2.png[]
 +
