@@ -107,7 +107,7 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-ha3.png[]
 +
-The *Readiness Probe* ensures that no traffic will be routed to the Pod until the Container/Application is ready to service traffic.  This is an important consideration given that moment a Pod/Container is in a *running* stating, the K8S Service will attempt to send any requests to it.  The *Readiness Probe* ensures the Application within the Container is also in a running state and is ready to service requests.
+The *Readiness Probe* ensures that no traffic will be routed to the Pod until the Container/Application is ready to service traffic.  This is an important consideration given that moment a Pod/Container is in a *running* state, the K8S Service will attempt to send any requests to it.  The *Readiness Probe* ensures the Application within the Container is also in a running state and is ready to service requests.
 +
 The *Liveness Probe* has a slightly different function.  Should the Application within the Container become hung or unresponsive (default is 3 failures), the Pod/Container will be killed allowing the K8S Replication Controller to spin up a new Pod/Container. Again, having *two or more* Pods is necessary for a true HA deployment, in case of a Liveness Probe failure.
 
