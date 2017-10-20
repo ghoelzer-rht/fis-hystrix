@@ -65,7 +65,7 @@ Now let's try out the *circuit breaker* for the *definition* API.  Go back to th
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-hystrix2.png[]
 +
-Now hit the definition API a bunch of times from the Swagger API Console and you should now see that the circuit breaker has *opened* due to the number of failures of the definition API as displayed below.  When the virtual "circuit" between the gateway/service router and the target microservice has been broken (e.g. open), the gateway immediately responds with a failure but will try router a request every so often at a set interval, testing the microservice and will close the circuit after a number of consecutive successful responses.
+Now hit the definition API a bunch of times from the Swagger API Console and you should now see that the circuit breaker has *opened* due to the number of failures of the definition API as *displayed below*.  When the virtual "circuit" between the gateway/service router and the target microservice has been broken (e.g. open), the gateway immediately responds with a failure.  However, the gateway will route a request every so often at a set interval, testing the microservice and will close the circuit after a number of consecutive successful responses.
 +
 image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-dashboard2.png[]
 +
