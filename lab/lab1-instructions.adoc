@@ -84,7 +84,7 @@ Items to go over include:
 4. Use the Openshift Explorer to connect to your OpenShift Lab Environment
 
 == HA, Auto-Scaling, and Prod Deployment Considerations
-This exercise with be a combination of a discussion around best practices, simple demonstrations using our Gateway Microservice example, and use of simple utilities to simulate load to validate configurations.  For the purposes of this lab, we will use Apache Benchmark to simulate load, if not already installed it can be found here - https://www.apachelounge.com/download/ (yes, you have to install the apache httpd binaries) .
+This exercise will be a combination of a discussion around best practices, simple demonstrations using our Gateway Microservice example, and use of simple utilities to simulate load to validate configurations.  For the purposes of this lab, we will use Apache Benchmark to simulate load, if not already installed it can be found https://www.apachelounge.com/download/[here] (yes, you have to install the apache httpd binaries).
 
 1. By default, Kubernetes Replication Controllers will ensure the requested number of Pods are running in the Cluster, and as part of our previous labs we saw that Rolling/No Downtime Deployments are supported.  Some additional considerations would be to ensure *two or more* Pods for components that require HA are specified.  Let's do this right now, and scale our *gateway* deployment:
 +
@@ -97,7 +97,7 @@ Now let's simulate some load against the gateway and definition microservice usi
 ab -n 100000 -c 4 -s 5 -k -r http://gateway-fis-hysterix-lab01.cloudapps.keyvan.com/api/definition/camel
 ----
 +
-This will generate a 100K requests using 4 sessions against our API.  Open the Hystrix Dashboard, and you can watch/monitor the activity.  Let's now "simulate" an outage by killing one of the Pods.  In the Web Console, click in the middle of the Pods graphic to diplay the running Pods.  While ensuring your *ab* command is still running, select one of the running Pods then from the *Actions* Drop Down, select *Delete* to terminate it.  Go back to the Project Overview, and you should see a new Pod starting, and your *ab* command still running.  Watch the Hystrix Dashboard to see the stats/graphic change while the new Gateway Pod starts up.
+This will generate a 100K requests using 4 sessions against our API.  Open the Hystrix Dashboard, and you can watch/monitor the activity.  Let's now "simulate" an outage by killing one of the Pods.  In the Web Console, click in the middle of the Pods graphic to display the running Pods.  While ensuring your *ab* command is still running, select one of the running Pods and then from the *Actions* Drop Down, select *Delete* to terminate it.  Go back to the Project Overview, and you should see a new Pod starting, and your *ab* command still running.  Watch the Hystrix Dashboard to see the stats/graphic change while the new Gateway Pod starts up.
 
 1. Now lets review some of the key configurations we already have in place necssary for an HA Deployment such as *Readiness and Liveness Probes*.
 +
