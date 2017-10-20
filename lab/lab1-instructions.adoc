@@ -72,7 +72,7 @@ image::https://github.com/ghoelzer-rht/fis-hystrix/blob/master/images/fis-lab-da
 Go back to the definition deployment within the Web Console and on the diplayed pod, click the up arrow scaling it to *One*.  After the definition Pod Health Check succeeds, hit the definition API a bunch of times from the Swagger API Console.  You should see that the circuit breaker is now *open* again and successful responses are returned.
 
 == *** Break:  Review JBoss Developer Studio and Project Code ***
-Now let's take a short break from Lab Exercises so we can look at the Developer IDE provided by JBoss Developer Studio.  *Make sure to have installed JBDS*. The package can be found here: https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=51401 .  If you don't have direct access, work with your OpenShift/Red Hat Sysadmin.  Download the settings.xml file from https://view.highspot.com/viewer/58e3afde3e255f7a216dc4ce[here] and copy it to your .m2 directory. Make sure to
+Now let's take a short break from Lab Exercises so we can look at the Developer IDE provided by JBoss Developer Studio.  *Make sure to have installed JBDS*. The package can be found https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=51401[here].  If you don't have direct access, work with your OpenShift/Red Hat Sysadmin.  Download the settings.xml file from https://view.highspot.com/viewer/58e3afde3e255f7a216dc4ce[here] and copy it to your .m2 directory. Make sure to
 replace <localRepository>….</localRepository> with the path your .m2 directory. Additionally, ensure the filename
 is all lowercase (e.g. not Settings.xml).
 +
