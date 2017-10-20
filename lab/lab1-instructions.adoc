@@ -75,10 +75,10 @@ Go back to the definition deployment within the Web Console and on the diplayed 
 Now let's take a short break from Lab Exercises so we can look at the Developer IDE provided by JBoss Developer Studio.  *Make sure to have installed JBDS*. The package can be found https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=51401[here].  If you don't have direct access, work with your OpenShift/Red Hat Sysadmin.  Download the settings.xml file from https://view.highspot.com/viewer/58e3afde3e255f7a216dc4ce[here] and copy it to your .m2 directory. Make sure to
 replace <localRepository>….</localRepository> with the path your .m2 directory. Additionally, ensure the filename
 is all lowercase (e.g. not Settings.xml).
-+
-Items to review are:
 
-1. Install the Fuse/Integration pack from the additional Red Hat Plugins provided
+Items to go over include:
+
+1. Installation of the Fuse/Integration pack from the additional Red Hat Plugins provided
 2. Import the existing Maven Lab Project into the IDE
 3. Review the Fuse Spring and Camel Java Route and Service Implementations
 4. Use the Openshift Explorer to connect to your OpenShift Lab Environment
